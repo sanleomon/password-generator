@@ -5,6 +5,22 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O",
     "^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",
     ".","?", "/"];
 
+let passwordLength = 15;
+let password1 = document.getElementById("password-display1");
+let password2 = document.getElementById("password-display2");
 
+function generatePassword() {
+    let password = "";
+    let randomIndex;
+    for (let i = 0; i < passwordLength; i++) {
+        randomIndex = Math.floor(Math.random() * characters.length);
+        password += characters[randomIndex];
+    }
 
+    return password;
+}
 
+function generatePasswords() {
+    password1.textContent = generatePassword();
+    password2.textContent = generatePassword();
+}

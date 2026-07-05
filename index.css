@@ -74,4 +74,13 @@ hr {
     height: 39px;
     border: none;
     border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.password-container p {
+    margin: 0;
+    color: #55F991;
+    font-size: 16px;
 }
