@@ -24,3 +24,26 @@ function generatePasswords() {
     password1.textContent = generatePassword();
     password2.textContent = generatePassword();
 }
+
+password1.addEventListener("click", function () {
+    copyPassword(password1);
+});
+password2.addEventListener("click", function () {
+    copyPassword(password2);
+});
+
+function copyPassword(passwordElement) {
+    const password = passwordElement.textContent;
+
+    if (password === "") {
+        return;
+    }
+
+    navigator.clipboard.writeText(password);
+
+    passwordElement.textContent = "Copied!";
+
+    setTimeout(function () {
+        passwordElement.textContent = password;
+    }, 1000);
+}
