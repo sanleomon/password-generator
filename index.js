@@ -9,14 +9,16 @@ let passwordLength = 15;
 let password1 = document.getElementById("password-display1");
 let password2 = document.getElementById("password-display2");
 let generateBtn = document.getElementById("generate-btn");
+let passwordContainer1 = document.getElementById("password-container1");
+let passwordContainer2 = document.getElementById("password-container2");
 
 generateBtn.addEventListener("click", generatePasswords);
 
-password1.addEventListener("click", function () {
+passwordContainer1.addEventListener("click", function () {
     copyPassword(password1);
 });
 
-password2.addEventListener("click", function () {
+passwordContainer2.addEventListener("click", function () {
     copyPassword(password2);
 });
 
