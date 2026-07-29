@@ -32,7 +32,7 @@ This project was created to practice:
 
 ## ▶️ Live Demo
 
-Coming soon...
+🌐 **Live Site:** https://password-generator-sanleomon.netlify.app
 
 ## 📂 Installation
 
