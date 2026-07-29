@@ -8,6 +8,17 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O",
 let passwordLength = 15;
 let password1 = document.getElementById("password-display1");
 let password2 = document.getElementById("password-display2");
+let generateBtn = document.getElementById("generate-btn");
+
+generateBtn.addEventListener("click", generatePasswords);
+
+password1.addEventListener("click", function () {
+    copyPassword(password1);
+});
+
+password2.addEventListener("click", function () {
+    copyPassword(password2);
+});
 
 function generatePassword() {
     let password = "";
@@ -24,13 +35,6 @@ function generatePasswords() {
     password1.textContent = generatePassword();
     password2.textContent = generatePassword();
 }
-
-password1.addEventListener("click", function () {
-    copyPassword(password1);
-});
-password2.addEventListener("click", function () {
-    copyPassword(password2);
-});
 
 function copyPassword(passwordElement) {
     const password = passwordElement.textContent;
